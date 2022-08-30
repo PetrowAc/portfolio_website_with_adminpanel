@@ -1,0 +1,107 @@
+@import '../config/variables.scss';
+
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: $z-fixed;
+    background-color: $c-Body;
+
+    &.scroll-header {
+        box-shadow: 0 -1px 4px rgba($color: #000000, $alpha: 0.15);
+    }
+}
+
+.nav {
+    max-width: 968px;
+    height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo,
+    &__toggle {
+        color: $c-Title;
+        font-weight: $fontMedium;
+        transition: all .3s;
+    }
+
+    &__logo {
+        &:hover {
+            color: $c-First;
+            transition: all .3s;
+        }
+    }
+
+    &__toggle {
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $c-First;
+            transition: all .3s;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .nav {
+            &__menu {
+                position: fixed;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                background-color: $c-Body;
+                padding: 2rem 1.5rem 4rem;
+                box-shadow: 0 -1px 4px rgba($color: #000000, $alpha: 0.15);
+                border-radius: 1.5rem 1.5rem 0 0;
+                transition: .3s;
+            }
+        }
+    }
+
+    &__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: $fontMedium;
+        font-size: $smallFontSize;
+        color: $c-Title;
+        transition: all .3s;
+
+        &:hover {
+            color: $c-First;
+            transition: all .3s;
+        }
+
+        &.active-link {
+            color: $c-First;
+        }
+    }
+
+    &__icon {
+        font-size: 1.2rem;
+    }
+
+    &__close {
+        position: absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: $c-First;
+
+        &:hover {
+            color: $c-First-alt;
+        }
+    }
+}
+
+.show-menu {
+    bottom: 0!important;
+}

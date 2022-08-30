@@ -1,0 +1,63 @@
+@import '../config/variables.scss';
+
+.footer {
+    padding-top: 2rem;
+
+    &__container {
+        row-gap: 3.5rem;
+    }
+
+    &__bg {
+        background-color: $c-First-second;
+        padding: 2rem 0 3rem;
+    }
+
+    &__title {
+        font-size: $h1FontSize;
+        margin-bottom: $mb-0-25;
+    }
+
+    &__subtitle {
+        font-size: $smallFontSize;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    &__link {
+        transition: all .3s;
+
+        &:hover {
+            color: $c-First-lighter;
+            transition: all .3s;
+        }
+    }
+
+    &__social {
+        font-size: 1.25rem;
+        margin-right: $mb-1-5;
+        transition: all .3s;
+
+        &:hover {
+            color: $c-First-lighter;
+            transition: all .3s;
+        }
+    }
+
+    &__copy {
+        font-size: $smallerFontSize;
+        text-align: center;
+        color: #FFF;
+        margin-top: $mb-3;
+    }
+
+    &__title,
+    &__subtitle,
+    &__link,
+    &__social {
+        color: #FFF;
+    }
+}

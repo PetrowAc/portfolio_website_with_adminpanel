@@ -1,0 +1,116 @@
+@import 'variables.scss';
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+
+    .change-theme {
+        font-size: 1.25rem;
+        color: $c-Title;
+        margin-right: $mb-1;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            color: $c-First;
+            transition: all .3s;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    //margin: 0 0 $headerHeight 0;
+    font-family: $body-font;
+    font-size: $normalFontSize;
+    background-color: $c-Body;
+    color: $c-Text;
+}
+
+h1, h2, h3, h4 {
+    color: $c-Title;
+    font-weight: $fontSemiBold;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+//------------- REUSABLE CSS CLASSES -------------
+.section {
+    padding: 2rem 0 4rem;
+
+    &__title {
+        font-size: $h1FontSize;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: $smallFontSize;
+        margin-bottom: $mb-3;
+    }
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+}
+
+//------------- LAYOUT -------------
+.container {
+    max-width: 768px;
+    margin-left: $mb-1-5;
+    margin-right: $mb-1-5;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: $c-First;
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: $z-tooltip;
+    transition: .4s;
+
+    &:hover {
+        background-color: $c-First-alt;
+        transition: .3s;
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        color: #FFF;
+    }
+
+    &.show-scroll {
+        bottom: 5rem;
+        transition: .4s;
+    }
+}
+
+

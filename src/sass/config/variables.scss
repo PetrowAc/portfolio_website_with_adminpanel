@@ -1,0 +1,106 @@
+$headerHeight: 3rem;
+
+//------------- VARIABLE DARK THEME -------------
+$c-hue: 230;
+body {
+    --first-color-second: #{hsl($c-hue, 69%, 61%)};
+    --title-color: #{hsl($c-hue, 8%, 15%)};
+    --text-color: #{hsl($c-hue, 8%, 45%)};
+    --input-color: #{hsl($c-hue, 70%, 96%)};
+    --body-color: #{hsl($c-hue, 60%, 99%)};
+    --container-color: #{#fff};
+    --srcoll-bar: #{hsl($c-hue, 12%, 90%)};
+    --srcoll-thumb: #{hsl($c-hue, 12%, 80%)};
+
+    &.dark-theme {
+        --first-color-second: #{hsl($c-hue, 30%, 8%)};
+        --title-color: #{hsl($c-hue, 8%, 95%)};
+        --text-color: #{hsl($c-hue, 8%, 75%)};
+        --input-color: #{hsl($c-hue, 29%, 16%)};
+        --body-color: #{hsl($c-hue, 28%, 12%)};
+        --container-color: #{hsl($c-hue, 29%, 16%)};
+        --srcoll-bar: #{hsl($c-hue, 12%, 48%)};
+        --srcoll-thumb: #{hsl($c-hue, 12%, 36%)};
+    }
+}
+
+//------------- COLOR -------------
+
+
+$c-First: hsl($c-hue, 69%, 61%);
+$c-First-second: var(--first-color-second);
+$c-First-alt: hsl($c-hue, 57%, 53%);
+$c-First-lighter: hsl($c-hue, 92%, 85%);
+$c-Title: var(--title-color);
+$c-Text: var(--text-color);
+$c-Text-light: hsl($c-hue, 8%, 65%);
+$c-Input: var(--input-color);
+//$c-Body: hsl($c-hue, 60%, 99%);
+$c-Body: var(--body-color);
+$c-Container: var(--container-color);
+$c-scroll-bar: var(--srcoll-bar);
+$c-scroll-thumb: var(--srcoll-thumb);
+
+//------------- FONTS -------------
+$poppins: 'Poppins', sans-serif;
+
+$body-font: $poppins;
+
+$bigFontSize: 2rem;
+$h1FontSize: 1.5rem;
+$h2FontSize: 1.25rem;
+$h3FontSize: 1.125rem;
+$normalFontSize: .938rem;
+$smallFontSize: .813rem;
+$smallerFontSize: .75rem;
+
+$fontMedium: 500;
+$fontSemiBold: 600;
+
+//------------- MARGINS -------------
+
+$mb-0-25: .25rem;
+$mb-0-5: .5rem;
+$mb-0-75: .75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+$mb-3: 3rem;
+
+//------------- Z-INDEX -------------
+
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+
+//------------- FONT SIZE FOR LARGE DEVICES -------------
+
+@media screen and (min-width: 968px) {
+    $bigFontSize: 3rem;
+    $h1FontSize: 2.25rem;
+    $h2FontSize: 1.5rem;
+    $h3FontSize: 1.25rem;
+    $normalFontSize: .1rem;
+    $smallFontSize: .875rem;
+    $smallerFontSize: .813rem;
+}
+
+//------------- SCROLL BAR -------------
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: $c-scroll-bar;
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $c-scroll-thumb;
+    border-radius: .5rem;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $c-Text-light;
+        transition: all .3s;
+    }
+}
